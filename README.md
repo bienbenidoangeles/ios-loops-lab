@@ -245,7 +245,29 @@ The difference in syntax between the two loops is that the while loop will check
 ***
 ## Question 1
 
-What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
+What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.<br/>
+
+The difference between break and continue is that break will terminate a block of code, whereas continue will reiterate a block of code.<br/>
+Ex of break:
+```swift
+for num in 1..10 {
+    if num == 4 {
+        break
+    }
+    print(num)
+}
+//prints numbers from 1 to 3
+```
+Ex of continue:
+```swift
+for num in 1..100 {
+    if num%10 != 0 {
+        continue
+    }
+    print(num)
+}
+//prints numbers evenly divisible by 10 from 1 to 100, ignoring all other numbers
+```
 
 ***
 ## Question 2
@@ -261,16 +283,16 @@ for i in 1...10 {
 }
 ```
 
-[]1
-[]2
-[]3
+[X]1
+[X]2
+[X]3
 []4
 []5
 []6
 []7
-[]8
-[]9
-[]10
+[X]8
+[]X9
+[X]10
 
 ***
 ## Question 3
@@ -286,9 +308,9 @@ for i in 1...10 {
 }
 ```
 
-[]1
-[]2
-[]3
+[X]1
+[X]2
+[X]3
 []4
 []5
 []6
@@ -312,6 +334,8 @@ outerloop: for x in 1...3 {
     }
 }
 ```
+
+The loop will print all possible combinations of x,y that exclude y values that equal to 2 and 3 as a continue statement is executed toward every y value that is 2, whereby it points it to the outerloop to ignore a y value of 2 and 3, and iterate to the next x interval or outerloop.
 
 ***
 ## Question 5
